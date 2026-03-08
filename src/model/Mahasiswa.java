@@ -8,40 +8,6 @@ package model;
  *
  * @author Lingga Kaindra
  */
-//public class Mahasiswa extends Person {
-//
-//    private String nim;
-//    private String jurusan;
-//
-//    
-//    public Mahasiswa(String nim, String name, int age, String jurusan) {
-//        super(name, age);
-//        this.nim = nim;
-//        this.jurusan = jurusan;
-//    }
-//    @Override
-//    public void displayInfo() {
-//        System.out.println("NIM: " + nim);
-//        super.displayInfo();  // menampilkan nama & umur
-//        System.out.println("Jurusan: " + jurusan);
-//    }
-//    public String getNim() {
-//    return nim;
-//}
-//
-//    public void setNim(String nim) {
-//        this.nim = nim;
-//    }
-//
-//    public String getJurusan() {
-//        return jurusan;
-//    }
-//
-//    public void setJurusan(String jurusan) {
-//        this.jurusan = jurusan;
-//    }
-//}
-
 public class Mahasiswa extends Person {
     private String nim;
     private String jurusan;
@@ -60,5 +26,23 @@ public class Mahasiswa extends Person {
     public String getJurusan() { return jurusan; }
     public void setJurusan(String jurusan) { this.jurusan = jurusan; }
     
+    @Override
+public void displayInfo() {
+    System.out.println("NIM : " + nim);
+    System.out.println("Nama : " + name);
+    System.out.println("Umur : " + age);
+    System.out.println("Jurusan : " + jurusan);
+}
+
+// OVERLOADING
+public void displayInfo(boolean detail) {
+
+    if(detail){
+        displayInfo();
+    }else{
+        System.out.println("NIM : " + nim + " | Nama : " + name);
+    }
+
+}
     // name dan age otomatis tersedia karena extends Person
 }

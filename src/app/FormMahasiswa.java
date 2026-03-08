@@ -239,6 +239,19 @@ try {
             JOptionPane.showMessageDialog(this, "Umur harus diisi!");
             return;
         }
+        
+        // Validasi jika nama kosong
+        else if(txtNama.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Nama harus diisi!");
+            return;
+        }
+        
+        // Validasi jika nama kosong
+        else if(txtJurusan.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Jurusan harus diisi!");
+            return;
+        }
+        
         int umur = Integer.parseInt(txtUmur.getText());
 
         // Buat objek Mahasiswa baru
@@ -282,7 +295,7 @@ try {
 
     private void tblMahasiswaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblMahasiswaMouseClicked
 int row = tblMahasiswa.getSelectedRow();
-        if (row != -1) {
+        if (row != -1) {    
             txtNim.setText(tblMahasiswa.getValueAt(row, 0).toString());
             txtNama.setText(tblMahasiswa.getValueAt(row, 1).toString());
             txtUmur.setText(tblMahasiswa.getValueAt(row, 2).toString());
